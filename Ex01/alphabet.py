@@ -13,7 +13,7 @@ def main():
         if f==1:
             break
     ed=datetime.datetime.now()
-    print(f"所要時間:{(ed-st).seconds}秒掛かりました")
+    
 
 
 def shutudai():
@@ -25,11 +25,10 @@ def shutudai():
 #対象文字からabschars個の文字をランダムに選ぶ：欠損文字
 abschar_list=random.sample(XXXX,YYYY)
 print(f"欠損文字：{abschar_list}") 
-
 #対象文字から欠損文字を除いたものを表示する：表示文字
 prechar_list=[ZZZZ]
 print(f"表示文字：{prechar_list}")
- abschar_list
+ 
 
 def kaitou(seikai):
     num=int(input("欠損文字はいくつあるでしょうか？"))
