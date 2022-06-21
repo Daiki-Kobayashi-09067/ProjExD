@@ -1,5 +1,5 @@
 import tkinter as tk
-import tkinter.messagebox as tkm
+
 
 def button_click(event):
     btn=event.widget
@@ -14,32 +14,8 @@ def button_click(event):
 
     if num=="C":
         entry.delete(0,tk.END)
-    
 
-    #if num=="^":
-    #    eqn=entry.get()
-    #    ans=eval(eqn)*eval(eqn)*eval(eqn)
-     #   entry.delete(0,tk.END)
-     #   entry.insert(tk.END,ans)
-    
-
-
-
-    
-    #elif num=="X":
-       # eqn=entry.get()
-       # res=eval(eqn)
-
-
-    
-        
-
-
-
-
-    #tkm.showinfo("",f"{num}のボタンが押されました")
-   # entry.insert(tk.END,num)
-
+   
 if __name__ == "__main__":
 
     root=tk.Tk()
