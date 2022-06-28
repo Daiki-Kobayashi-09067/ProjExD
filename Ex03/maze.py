@@ -44,15 +44,11 @@ if __name__=="__main__":
     cx,cy=mx*100,my*100
     bx = randint(100,1400)*mx
     by = randint(0,800)*my
-    
+    a=bx+50
+    b=by+50
 
     canvas.create_image(cx, cy, image = tori, tag = "tori")
-    canvas.create_image(bx, by, image = teki, tag = "teki")
-    
-    
-
-    if cx == bx and cy == by:
-        print("GAMEOVER")
+    canvas.create_image(a, by, image = teki, tag = "teki")
 
 
     canvas.create_image(cx,cy,image=tori,tag="tori")
