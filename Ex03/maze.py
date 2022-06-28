@@ -1,5 +1,6 @@
 import tkinter as tk
 import maze_maker as mm
+from random import randint
 
 
 def key_down(event):
@@ -38,10 +39,25 @@ if __name__=="__main__":
 
 
     tori=tk.PhotoImage(file="fig/3.png")
+    teki = tk.PhotoImage(file = "fig/7.png")
     mx,my=1,1
-    cx,cy=mx*100+50,my*100+50
-    canvas.create_image(cx,cy,image=tori,tag="tori")
+    cx,cy=mx*100,my*100
+    bx = randint(100,1400)*mx
+    by = randint(0,800)*my
+    
 
+    canvas.create_image(cx, cy, image = tori, tag = "tori")
+    canvas.create_image(bx, by, image = teki, tag = "teki")
+    
+    
+
+    if cx == bx and cy == by:
+        print("GAMEOVER")
+
+
+    canvas.create_image(cx,cy,image=tori,tag="tori")
+    canvas.create_image(bx,by,image=teki,tag="teki")
+    
     key=""
     root.bind("<KeyPress>",key_down)
     root.bind("<KeyRelease>",key_up)
