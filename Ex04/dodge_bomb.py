@@ -62,6 +62,9 @@ def main():
 
         #練習5
         screen_sfc.blit(bmimg_sfc,bmimg_rct)
+        
+        #練習8
+        if kkimg_rct.colliderect(bmimg_rct): return
 
 
 
@@ -70,7 +73,7 @@ def main():
         pg.display.update()
         clock.tick(1000)
 
-#練習7
+#練習7 壁判定
 def check_bound(rct,scr_rct):
     #rct:こうかとんor爆弾
     #scr_rct:スクリーン
