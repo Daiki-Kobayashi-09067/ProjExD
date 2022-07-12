@@ -103,15 +103,15 @@ def main():
     tori.draw(screen.disp)
 
     teki = pg.sprite.Group()
-    teki.add(Teki("fig/images.jfif", 1, (+5, +5),screen))
+    teki.add(Teki("fig/images.jfif", 1, (+1, +1),screen))
     teki.draw(screen.disp)
 
     # 練習5
-    bomb = Bomb((0,0,0), 10, (+5, +5), screen)
+    bomb = Bomb((0,0,0), 10, (+2, +2), screen)
     screen.disp.blit(bomb.image, bomb.rect)               # 爆弾用のSurfaceを画面用Surfaceに貼り付ける
     bombs = pg.sprite.Group()
     for _ in range(5):
-      bombs.add(Bomb((255,0,255), random.randint(1,50), (+2, +2), screen))
+      bombs.add(Bomb((255,0,255), random.randint(1,50), (+1, +1), screen))
     bombs.draw(screen.disp)
 
     while True:
